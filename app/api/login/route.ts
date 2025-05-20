@@ -2,8 +2,8 @@ import { cookies } from "next/headers"
 import { type NextRequest, NextResponse } from "next/server"
 
 // Hardcoded credentials - in a real app, you'd use a more secure approach
-const VALID_USERNAME = "aleyanadhirah"
-const VALID_PASSWORD = "sayacantikcomel"
+const VALID_USERNAME = process.env.AUTH_USERNAME
+const VALID_PASSWORD = process.env.AUTH_PASSWORD
 
 export async function POST(request: NextRequest) {
   try {
